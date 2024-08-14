@@ -51,7 +51,38 @@ class Character{
 
   //Part 3
 
-  
+  class Adventurer extends Character{
+    constructor (name, role) {
+      super(name);
+      // Adventurers have specialized roles.
+      this.role = role;
+      // Every adventurer starts with a bed and 50 gold coins.
+      this.inventory.push("bedroll", "50 gold coins");
+    }
+    // Adventurers have the ability to scout ahead of them.
+    scout () {
+      console.log(`${this.name} is scouting ahead...`);
+      super.roll();
+    }
+    //override
+    toString(){
+        console.log(`name = ${this.name} , role = ${this.role}`);
+        this.inventory.forEach((each)=>{
+            console.log(each);
+        })
+    }
+  }
+    class Companion extends Character{
+        constructor(name, type) {
+            this.name = name;
+            this.type = type;
+        }
+    }
+const robin_ = new Adventurer("robin","climber");
+const Anne = new Adventurer("Anne","coder");
+console.log(robin_.toString());
+console.log(Anne.toString());
+
 
 
 
