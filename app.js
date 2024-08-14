@@ -51,57 +51,7 @@ class Character{
 
   //Part 3
 
-  class Adventurer extends Character {
-    constructor (name, role) {
-      super(name);
-      // Adventurers have specialized roles.
-      this.role = role;
-      // Every adventurer starts with a bed and 50 gold coins.
-      this.inventory.push("bedroll", "50 gold coins");
-    }
-    // Adventurers have the ability to scout ahead of them.
-    scout () {
-      console.log(`${this.name} is scouting ahead...`);
-      super.roll();
-    }
-
-  }
-
-    class Companion{
-        constructor(name, type) {
-        this.name = name;
-        this.type = type;
-        }
-    }
-
-
-
-
-
-//=-------------------------------------
-      //for attack
-    //   attack(target) {
-    //     const damage = Math.floor(Math.random() * 10) + 1 + this.level;
-    //     console.log(`${this.name} attacks ${target.name} and deals ${damage} damage.`);
-    //     target.health -= damage;
-    //   }
-
-    //for adding item to the inventory
-    // addItem(item) {
-    //     this.inventory.push(item);
-    //     console.log(`${item} added to ${this.name}'s inventory.`);
-    //   }
-
-//===================================
-
-  class Companion extends Character {
-    constructor(name, type) {
-      super(name);
-      this.type = type;
-    }
   
-    // Companions have a special ability
-    specialAbility() {
-      console.log(`${this.name} the ${this.type} uses their special ability!`);
-    }
-  }
+
+
+
